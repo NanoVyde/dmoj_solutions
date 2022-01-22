@@ -1,0 +1,42 @@
+/*NEISPRESTA*/ 
+
+/* 
+ * This is a custom version of V8 that adds six functions in order to perform I/O and aid in online judging.
+ *
+ * * `print(...)`: similar to Python's `print`, prints all argument separated by space followed by new line.
+ * * `flush()`: flushes stdout, ensuring everything output by `print()` immediately shows up.
+ * * `gets()`: similar to the Ruby equivalent, returns one line of input from `stdin`.
+ * * `read(bytes)`: read `bytes` bytes from stdin as an `ArrayBuffer`.
+ * * `write(buffer)`: write a typed array, `ArrayBuffer`, or a view of `ArrayBuffer` to stdout.
+ * * `quit(code)`: exits the program with `code`.
+ * * You can also assign to the global variable `autoflush` to control whether `print()` flushes.
+ *
+ 
+ Help Mr. Sidhu, your favourite math teacher, find the median mark on a class test. The first line will consist of  , the number of marks. This line will be followed by  lines with each containing an integer mark . Round to the nearest integer if necessary. We use standard mathematical conventions for rounding.
+ */
+ 
+ var pazymiuKiekis=+gets();
+ 
+ var pazymiai = [];
+ 
+ for (let i = 0; i < pazymiuKiekis; i++) {
+ pazymiai.push(Math.round(+gets()));
+}
+pazymiai = pazymiai.sort();
+if (pazymiuKiekis == 1) {
+    print(pazymiai[0]);
+    
+}else if (pazymiuKiekis % 2 == 0) {
+    vidurys = pazymiuKiekis / 2;
+  index = vidurys - 1;
+  index2 = index + 1;
+  reiksme1 = pazymiai[index];
+  reiksme2 = pazymiai[index2];
+  vidurkis1 = Math.round((reiksme1 + reiksme2)/2);
+  print(vidurkis1);
+}
+else {
+    index3 = Math.floor(pazymiuKiekis/2);
+    reiksme3 = pazymiai[index3];
+    print(reiksme3);
+}
