@@ -1,0 +1,32 @@
+/* 
+ * This is a custom version of V8 that adds six functions in order to perform I/O and aid in online judging.
+ *
+ * * `print(...)`: similar to Python's `print`, prints all argument separated by space followed by new line.
+ * * `flush()`: flushes stdout, ensuring everything output by `print()` immediately shows up.
+ * * `gets()`: similar to the Ruby equivalent, returns one line of input from `stdin`.
+ * * `read(bytes)`: read `bytes` bytes from stdin as an `ArrayBuffer`.
+ * * `write(buffer)`: write a typed array, `ArrayBuffer`, or a view of `ArrayBuffer` to stdout.
+ * * `quit(code)`: exits the program with `code`.
+ * * You can also assign to the global variable `autoflush` to control whether `print()` flushes.
+ *
+ 
+ One day Mr. Sidhu's students are talking too much (as usual) and so he decides to give them a task that might quiet them down for a bit.
+
+He tells them the width and length of the classroom (first line of input) as well as the side length of a standard square tile (second line of input). None of these dimensions will be less than  or greater than .
+
+You may assume that they are of the same unit. What is the maximum number of entire tiles that can fit within the classroom's surface? The tiles can only be axially aligned (sides parallel to the sides of the room).
+ */
+ 
+ var [ilgisT, plotisT]= gets().split(" ");
+ var plyteleT=gets();
+ var ilgis=+ilgisT;
+ var plotis=+plotisT;
+ 
+ var plytele=+plyteleT;
+ 
+ var telpaIPloti=Math.floor(plotis/plytele);
+ var telpaIIlgi=Math.floor(ilgis/plytele);
+ 
+ var isViso=Math.floor(telpaIPloti*telpaIIlgi);
+ 
+ print(isViso);
